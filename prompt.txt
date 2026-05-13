@@ -1,0 +1,6 @@
+using $gpc-app-builder  create this app
+app title: CLUB TENNIS DE VILLEJUST
+app idea: An operations-focused app offering lead management, asset management, interview scheduling, and visitor management to streamline daily business tasks.
+company name: CLUB TENNIS DE VILLEJUST
+email address: [email to be provided later]
+the two icon and featured graphics contained in docs folder

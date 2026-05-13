@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#234947">
+  <title>CLUB TENNIS DE VILLEJUST</title>
+  <link rel="icon" href="favicon.png">
+  <link rel="manifest" href="manifest.json">
+  <style>
+    :root {
+      --midnight: #161e29;
+      --green: #234947;
+      --slate: #414946;
+      --gold: #ab8c26;
+      --linen: #f8f5ea;
+      --paper: #fffcf2;
+      --line: #d9d2bd;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--midnight);
+      background: var(--linen);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .site-header {
+      position: fixed;
+      z-index: 10;
+      inset: 0 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 14px clamp(18px, 4vw, 48px);
+      color: var(--white);
+      background: rgba(22, 30, 41, 0.82);
+      backdrop-filter: blur(12px);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      min-width: 0;
+      gap: 12px;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .brand img {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+    }
+
+    .brand span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .site-header nav {
+      display: flex;
+      gap: 18px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .site-header a {
+      text-decoration: none;
+    }
+
+    .hero {
+      min-height: 84svh;
+      display: grid;
+      align-items: end;
+      padding: 120px clamp(18px, 5vw, 72px) clamp(46px, 7vw, 84px);
+      color: var(--white);
+      background:
+        linear-gradient(90deg, rgba(22, 30, 41, 0.92), rgba(22, 30, 41, 0.54) 58%, rgba(22, 30, 41, 0.32)),
+        url("featured.png") center / cover no-repeat;
+    }
+
+    .hero-content {
+      width: min(760px, 100%);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: #f0d978;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 12ch;
+      font-size: clamp(44px, 8vw, 86px);
+      line-height: 0.95;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      width: min(640px, 100%);
+      margin: 20px 0 0;
+      color: #f2ecd9;
+      font-size: clamp(17px, 2vw, 21px);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 46px;
+      padding: 12px 18px;
+      border-radius: 8px;
+      color: var(--midnight);
+      background: var(--gold);
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.36);
+    }
+
+    main {
+      display: grid;
+      gap: 0;
+    }
+
+    section {
+      padding: clamp(44px, 7vw, 78px) clamp(18px, 5vw, 72px);
+    }
+
+    .section-inner {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+    }
+
+    .section-title {
+      max-width: 760px;
+      margin: 0 0 24px;
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      min-height: 190px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+    }
+
+    .card strong {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--green);
+      font-size: 18px;
+    }
+
+    .card p,
+    .feature p,
+    .contact p {
+      margin: 0;
+      color: var(--slate);
+    }
+
+    .feature-band {
+      color: var(--white);
+      background: var(--midnight);
+    }
+
+    .feature {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: clamp(24px, 5vw, 62px);
+      align-items: center;
+    }
+
+    .feature h2,
+    .feature p {
+      color: var(--white);
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .feature-list li {
+      padding: 14px 16px;
+      border-left: 4px solid var(--gold);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      font-weight: 800;
+    }
+
+    .contact {
+      background: var(--paper);
+    }
+
+    .contact-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--linen);
+    }
+
+    footer {
+      padding: 24px clamp(18px, 5vw, 72px);
+      color: #e7dec5;
+      background: var(--midnight);
+      font-size: 13px;
+    }
+
+    @media (max-width: 820px) {
+      .site-header nav {
+        display: none;
+      }
+
+      .hero {
+        min-height: 78svh;
+        padding-top: 96px;
+      }
+
+      .grid,
+      .feature {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        min-height: auto;
+      }
+
+      .contact-box {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="CLUB TENNIS DE VILLEJUST home">
+      <img src="favicon.png" alt="">
+      <span>CLUB TENNIS DE VILLEJUST</span>
+    </a>
+    <nav aria-label="Primary">
+      <a href="#workflows">Workflows</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="hero-content">
+      <p class="eyebrow">Local Android operations workspace</p>
+      <h1>CLUB TENNIS DE VILLEJUST</h1>
+      <p>Manage leads, assets, interviews, and visitor activity from a focused phone app built for the daily club desk.</p>
+      <div class="hero-actions">
+        <a class="button" href="#workflows">View workflows</a>
+        <a class="button secondary" href="mailto:support@clubtennisdevillejust.fr">Contact support</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section id="workflows">
+      <div class="section-inner">
+        <h2 class="section-title">One place for the operational records staff check all day.</h2>
+        <div class="grid">
+          <article class="card">
+            <strong>Lead management</strong>
+            <p>Track prospects, owners, status, priority, due windows, and next steps.</p>
+          </article>
+          <article class="card">
+            <strong>Asset management</strong>
+            <p>Keep shared equipment and rooms visible with review and responsibility notes.</p>
+          </article>
+          <article class="card">
+            <strong>Interview scheduling</strong>
+            <p>Plan candidate conversations and keep follow-up actions close to the schedule.</p>
+          </article>
+          <article class="card">
+            <strong>Visitor management</strong>
+            <p>Log expected visitors, hosts, check-ins, and outcomes for reception handoff.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-band" id="privacy">
+      <div class="section-inner feature">
+        <div>
+          <h2 class="section-title">Built for local use only.</h2>
+          <p>The app stores records on the device and does not require an account, server, analytics, advertising identifiers, location, contacts, photos, microphone, payment, or health data.</p>
+        </div>
+        <ul class="feature-list" aria-label="Privacy highlights">
+          <li>No Android permission declarations</li>
+          <li>No cloud sync or network APIs</li>
+          <li>No analytics or advertising SDKs</li>
+          <li>Records can be cleared by removing app data</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="section-inner contact-box">
+        <div>
+          <h2 class="section-title">Support for club operations.</h2>
+          <p>For privacy questions or app support, contact CLUB TENNIS DE VILLEJUST.</p>
+        </div>
+        <a class="button" href="mailto:support@clubtennisdevillejust.fr">support@clubtennisdevillejust.fr</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    CLUB TENNIS DE VILLEJUST - Local Android operations app.
+  </footer>
+</body>
+</html>
