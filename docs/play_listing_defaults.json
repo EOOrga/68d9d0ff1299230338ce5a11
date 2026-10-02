@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "applications": {
+    "com.clubtennisdevillejust.club_tennis_villejust_ops": {
+      "title": "CLUB TENNIS DE VILLEJUST",
+      "short_description": "Manage leads, assets, interviews, and visitors from one local operations...",
+      "full_description": "CLUB TENNIS DE VILLEJUST helps a busy club desk keep daily operational work organized without an account or cloud service. Staff can record lead follow-ups, equipment and room assets, interview appointments, and visitor arrivals in a focused mobile workflow.\n\nEach record includes an owner, status, priority, due window, and notes so the next action is easy to find during the day. The dashboard highlights open work and status lanes, while dedicated screens keep each workstream clear.\n\nAll records are stored locally on the device. The app does not use analytics, advertising identifiers, cloud sync, or network APIs.",
+      "source_screenshots": [
+        "docs/screens/1.png",
+        "docs/screens/2.png",
+        "docs/screens/3.png"
+      ],
+      "generated_from": "existing repository listing metadata and README",
+      "generated_at": "2026-10-02T21:27:16.873155+00:00"
+    }
+  }
+}
