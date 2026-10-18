@@ -1,0 +1,5 @@
+CLUB TENNIS DE VILLEJUST helps a busy club desk keep daily operational work organized without an account or cloud service. Staff can record lead follow-ups, equipment and room assets, interview appointments, and visitor arrivals in a focused mobile workflow.
+
+Each record includes an owner, status, priority, due window, and notes so the next action is easy to find during the day. The dashboard highlights open work and status lanes, while dedicated screens keep each workstream clear.
+
+All records are stored locally on the device. The app does not use analytics, advertising identifiers, cloud sync, or network APIs.
