@@ -29,7 +29,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.clubtennisdevillejust.club_tennis_villejust_ops"
+        applicationId = "com.clubtennisdevillejust.club_tennis_sibit"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
