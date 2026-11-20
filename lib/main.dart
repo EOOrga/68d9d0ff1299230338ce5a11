@@ -438,7 +438,7 @@ class DashboardPage extends StatelessWidget {
         ),
         const SizedBox(height: 20),
         SectionHeader(
-          title: 'Priority queue',
+          title: 'CLUB TENNIS DE VILLEJUST',
           actionText: '${highPriority.length} active',
         ),
         const SizedBox(height: 8),
